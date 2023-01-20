@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Quae</title>
+    <script>
+      function isPrime(){
+        var numero = document.getElementById("numero").value;
+        var primo = true;
+        for(var i = 2; i < numero; i++) {
+          if (numero % i == 0) {
+            primo = false;
+            break;
+          }
+        }
+        if(primo) {
+          alert("Il numero " + numero + " è primo!");
+        }
+        else {
+          alert("Il numero " + numero + " non è primo!");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <input type="text" id="numero" placeholder="Inserisci un numero intero">
+      <input type="button" value="Verifica" onclick="isPrime()">
+    </form>
+  </body>
+</html>
